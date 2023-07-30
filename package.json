@@ -1,6 +1,58 @@
 {
-  "name": "take-home-backend",
+  "name": "data-sharing-backend",
+  "type": "module",
   "version": "1.0.0",
+  "description": "Data sharing application",
   "main": "index.js",
-  "license": "MIT"
+  "scripts": {
+    "lint": "eslint . --fix",
+    "start": "node index.js",
+    "dev": "nodemon -r dotenv/config index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git"
+  },
+  "keywords": [
+    "nodejs",
+    "express",
+    "rest",
+    "api",
+    "firebase"
+  ],
+  "author": "Somoye Ayotunde <somoye.ayotunde@gmail.com>",
+  "license": "ISC",
+  "bugs": {},
+  "devDependencies": {
+    "dotenv": "^16.3.1",
+    "eslint": "^8.46.0",
+    "nodemon": "^3.0.1"
+  },
+  "nodemonConfig": {
+    "restartable": "yes",
+    "ignore": [
+      "node_modules/**/node_modules"
+    ],
+    "delay": "1500",
+    "env": {
+      "NODE_ENV": "development",
+      "PORT": 4000
+    }
+  },
+  "dependencies": {
+    "cloudinary": "^1.39.0",
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "express-rate-limit": "^6.8.1",
+    "express-validator": "^7.0.1",
+    "firebase": "^10.1.0",
+    "firebase-admin": "^11.10.1",
+    "helmet": "^7.0.0",
+    "multer": "^1.4.5-lts.1",
+    "sharp": "^0.32.4",
+    "streamifier": "^0.1.1",
+    "v-response": "^1.1.0",
+    "winston": "^3.10.0",
+    "xss-clean": "^0.1.4"
+  }
 }
